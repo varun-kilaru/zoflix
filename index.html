@@ -10,20 +10,13 @@
 				background-color: black;
 				color: white;
 			}
-			.searchSort{
-				padding: 20px;
-			}
 			#filter-by option:hover{
 				background-color: #0275d8;
 				color: white;
 				cursor: pointer;
 			}
-			#movie-data{
-				margin-right: 10px;
-				padding: 20px;
-			}
 			.mve-row{
-				padding: 20px;
+				margin-bottom: 20px;
 			}
 			.mve-row:hover{
 				border-left: 6px solid lightblue;
@@ -99,7 +92,7 @@
 				<div style="display: none;" class="container" id="home-veiw">
 					<h2 class="text-center">zoflix</h2>
 					<div class="row searchSort">
-						<div class="col-4">
+						<div class="col-6">
 							<div class="input-group mb-3" id="search">
 							  <div class="input-group-prepend">
 							    <button id="key-name" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
@@ -115,9 +108,9 @@
 							</div>
 							<!-- <input type="text" class="form-control" name="searchWord" id="search" placeholder="search by Movie Name..."> -->
 						</div>
-						<div class="col-3"></div>
-						<div class="col-5">
-							<select style="width: 50%;" class="custom-select ml-5" name="sortKey" id="sort">
+						<!-- <div class="col-1"></div> -->
+						<div class="col-6">
+							<select class="custom-select" name="sortKey" id="sort">
 								<option value="default">Choose to sort by...</option>
 								<option value="movie">movie name</option>
 								<option value="rating">rating</option>
@@ -125,9 +118,8 @@
 							</select>
 						</div>
 					</div>
-					<h3>Movies List : </h3>
-					<div class="container" id="movie-data"></div>
-					<div class="row" id="add-mve">
+					<p>Add New Movie : </p>
+					<div class="row ml-5" id="add-mve">
 						<form class="form-inline" id="new-mve">
 						  <label class="sr-only" for="mveName">Name</label>
 						  <input type="text" class="form-control mb-2 mr-sm-2" name="movie" id="mveName" placeholder="Movie Name">
@@ -140,6 +132,8 @@
 						  <button class="btn btn-primary mb-2" id="addNewMve">Add New</button>
 						</form>
 					</div>
+					<h3 class="mb-3">Movies List : </h3>
+					<div class="container ml-3" id="movie-data"></div>
 				</div>
 
 
