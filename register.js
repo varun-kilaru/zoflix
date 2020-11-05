@@ -46,7 +46,7 @@ function validateRegUser(userObj){
 		alert('Email is invalid\nCheck Email Once!');
 		return false;
 	}
-	else if(userObj["pass"].length>5 && userObj["cnfrmPass"].length>5){
+	else if(userObj["pass"].length>4 && userObj["cnfrmPass"].length>4){
 		// if(regPass.test(userObj["password"])==false || regPass.test(userObj["cnfrm-password"])==false){
 		// 	alert('Passwords should contain at least one number and one uppercase and lowercase letter');
 		// 	return false;
@@ -57,7 +57,7 @@ function validateRegUser(userObj){
 		}
 	}
 	else{
-		alert('Passwords should be of atleast 6 characters.');
+		alert('Passwords should be of atleast 5 characters.');
 		return false;
 	}
 	return true;
