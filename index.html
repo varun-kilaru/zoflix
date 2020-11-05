@@ -5,10 +5,14 @@
 		<!-- Bootstrap style -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 		<style>
 			body{
 				background-color: black;
 				color: white;
+				scroll-behavior: smooth;
 			}
 			#filter-by option:hover{
 				background-color: #0275d8;
@@ -16,10 +20,18 @@
 				cursor: pointer;
 			}
 			.mve-row{
-				margin-bottom: 20px;
+				margin: auto;
+				/*margin-bottom: 20px;*/
+				padding: 15px 30px;
+				transition: 0.5s;
+				width: 90%;
 			}
 			.mve-row:hover{
-				border-left: 6px solid lightblue;
+				border-left: 20px solid #0275d8;
+				border-right: 20px solid #0275d8;
+				border-radius: 6px;
+				background-color: powderblue;
+				color: black;
 				transform: scale(1.05);
 			}
 			.edit-rating:hover{
@@ -90,10 +102,10 @@
 
 
 				<div style="display: none;" class="container" id="home-veiw">
-					<h2 class="text-center">zoflix</h2>
+					<h2 class="text-center text-primary mb-5">zoflix</h2>
 					<div class="row searchSort">
 						<div class="col-6">
-							<div class="input-group mb-3" id="search">
+							<div class="input-group animate__animated animate__pulse mb-3" id="search">
 							  <div class="input-group-prepend">
 							    <button id="key-name" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
 							    	Filter by
@@ -118,7 +130,6 @@
 							</select>
 						</div>
 					</div>
-					
 					<div class="row ml-5" id="add-mve">
 						<form class="form-inline" id="new-mve">
 						  <label class="sr-only" for="mveName">Name</label>
@@ -129,7 +140,7 @@
 						  <input type="text" class="form-control mb-2 mr-sm-2" name="lang" id="mveLang" placeholder="Movie Language">
 						  <label class="sr-only" for="mveRating">Name</label>
 						  <input type="number" step="0.1" max="5" class="form-control mb-2 mr-sm-2" name="rating" id="mveRating" placeholder="Movie Rating">
-						  <button class="btn btn-primary mb-2" id="addNewMve">Add New</button>
+						  <button class="btn btn-primary mb-2" id="addNewMve"><i class="fa fa-plus" style="font-size:16px;"></i> Add New</button>
 						</form>
 					</div>
 					<h3 class="mb-3">Movies List : </h3>
