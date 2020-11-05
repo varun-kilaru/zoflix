@@ -1,0 +1,158 @@
+<html>
+	<head>
+		<title></title>
+
+		<!-- Bootstrap style -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+		<style>
+			body{
+				background-color: black;
+				color: white;
+			}
+			.searchSort{
+				padding: 20px;
+			}
+			#movie-data{
+				margin-right: 10px;
+				padding: 20px;
+			}
+			.mve-row{
+				padding: 20px;
+			}
+			.mve-row:hover{
+				border-left: 6px solid lightblue;
+				transform: scale(1.05);
+			}
+			.edit-rating:hover{
+				cursor: pointer;
+			}
+			#login-veiw, #register-veiw{
+				margin: auto;
+				max-width: 60%;
+				padding-top: 80px;
+			}
+			#loginToReg:hover, #nav-logout:hover{
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+
+
+			<nav>
+				<ul class="nav justify-content-end">
+				  <li class="nav-item">
+				    <span class="nav-link text-primary" id="nav-username"></span>
+				  </li>
+				  <li class="nav-item">
+				    <span class="nav-link text-primary" id="nav-logout"></span>
+				  </li>
+				</ul>
+			</nav>
+
+
+			<content>
+
+
+				<div style="display: block;" class="container" id="login-veiw">
+					<h2 class="text-center mb-5">Sign In</h2>
+					<form id="login-form">
+					  <div class="form-group">
+					    <input type="email" class="form-control mb-4" name="email" id="login-mail" placeholder="Enter email">
+					  </div>
+					  <div class="form-group mb-5">
+					    <input type="password" class="form-control" name="pass" id="login-pass" placeholder="Password">
+					  </div>
+					  <button class="btn btn-primary" id="loginBtn">Login</button>
+					  <span class="mt-5">Don't have an account?<a class="text-primary" id="loginToReg">Register Here</a></span>
+					</form>
+				</div>
+
+
+				<div style="display: none;" class="container" id="register-veiw">
+					<h2 class="text-center mb-5">Sign Up</h2>
+					<form id="register-form">
+						<div class="form-group mb-4">
+						    <input type="text" class="form-control" name="username" id="register-username" placeholder="Enter Username">
+						</div>
+					  <div class="form-group mb-4">
+					    <input type="email" class="form-control" name="email" id="register-mail" placeholder="Enter email">
+					  </div>
+					  <div class="form-group mb-4">
+					    <input type="password" class="form-control" name="pass" id="register-pass" placeholder="Password">
+					  </div>
+					  <div class="form-group mb-4">
+					    <input type="password" class="form-control" name="cnfrmPass" id="register-cnfrmPass" placeholder="Confirm Password">
+					  </div>
+					  <button type="submit" class="btn btn-primary" id="registerBtn">Register</button>
+					</form>
+				</div>
+
+
+				<div style="display: none;" class="container" id="home-veiw">
+					<h2 class="text-center">zoflix</h2>
+					<div class="row searchSort">
+						<div class="col-4">
+							<div class="input-group mb-3" id="search">
+							  <div class="input-group-prepend">
+							    <button id="key-name" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+							    	Filter by
+							    </button>
+							    <div class="dropdown-menu" id="filter-by">
+							      <option class="dropdown-item" value="movie">Name</option>
+							      <option class="dropdown-item" value="genre">Genre</option>
+							      <option class="dropdown-item" value="lang">Language</option>
+							    </div>
+							  </div>
+							  <input type="text" class="form-control" id="search-val" placeholder="filter movies by...">
+							</div>
+							<!-- <input type="text" class="form-control" name="searchWord" id="search" placeholder="search by Movie Name..."> -->
+						</div>
+						<div class="col-3"></div>
+						<div class="col-5">
+							<select style="width: 50%;" class="custom-select ml-5" name="sortKey" id="sort">
+								<option value="" selected>Choose to sort by...</option>>
+								<option value="movie">movie name</option>
+								<option value="rating">rating</option>
+								<option value="date">recent</option>
+							</select>
+						</div>
+					</div>
+					<h3>Movies List : </h3>
+					<div class="container" id="movie-data"></div>
+					<div class="row" id="add-mve">
+						<form class="form-inline" id="new-mve">
+						  <label class="sr-only" for="mveName">Name</label>
+						  <input type="text" class="form-control mb-2 mr-sm-2" name="movie" id="mveName" placeholder="Movie Name">
+						  <label class="sr-only" for="mveGenre">Name</label>
+						  <input type="text" class="form-control mb-2 mr-sm-2" name="genre" id="mveGenre" placeholder="Movie Genre">
+						  <label class="sr-only" for="mveLang">Name</label>
+						  <input type="text" class="form-control mb-2 mr-sm-2" name="lang" id="mveLang" placeholder="Movie Language">
+						  <label class="sr-only" for="mveRating">Name</label>
+						  <input type="number" step="0.1" max="5" class="form-control mb-2 mr-sm-2" name="rating" id="mveRating" placeholder="Movie Rating">
+						  <button class="btn btn-primary mb-2" id="addNewMve">Add New</button>
+						</form>
+					</div>
+				</div>
+
+
+			</content>	
+
+
+		</div>
+
+
+		<!-- My JS -->
+		<script type="text/javascript" src="register.js"></script>
+		<script type="text/javascript" src="login.js"></script>
+		<script type="text/javascript" src="movies.js"></script>
+		<script type="text/javascript" src="utilities.js"></script>
+
+		<!-- Bootsrap JS -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	</body>
+</html>
