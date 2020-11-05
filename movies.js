@@ -36,6 +36,7 @@ movieData.addEventListener('click', function(e){
 		var rateInp=tar.parentElement.parentElement.querySelector("#edit-inpR");
 		// console.log(rateInp);
 		rateInp.disabled=false;
+		rateInp.focus();
 		rateInp.addEventListener('change', function(e){
 			if(e.target.value > 5 || e.target.value < 0){
 				alert('Rate from 1-5 only');
@@ -67,12 +68,18 @@ insertB.addEventListener('click', function(e){
 	e.preventDefault();
 	var obj={};
 	var allInp = document.querySelectorAll("#new-mve input");
+	var infoEmptyflag=false;
 	allInp.forEach((inp)=>{
-		obj[inp.name]=inp.value;
+		if(inp.value!="")
+			obj[inp.name]=inp.value;
+		else
+			infoEmptyflag=true;
 		// inp.value="";
 	});
 	var rate=document.querySelector("#mveRating");
-	if(obj["rating"] > 5 || obj["rating"] < 0){
+	if(infoEmptyflag)
+		alert('Enter all details of the movie.')
+	else if(obj["rating"] > 5 || obj["rating"] < 0){
 		alert('Rate 1-5 only');
 		rate.focus();
 	}
@@ -153,7 +160,7 @@ function appendMve(obj){
 	generateMveContent(movies);
 }
 
-
+var cntRating=1;
 function setRating(key, rating){
 	// console.log(key, rating);
 	movies.forEach((mve)=>{

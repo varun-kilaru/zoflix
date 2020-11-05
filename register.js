@@ -78,7 +78,14 @@ function redirectToLogin(){
 	homeVeiw.style.display="none";
 	loginVeiw.style.display="block";
 	// currentUser={}; 
-	localStorage.removeItem("currentUser");
+	resetAllInp();
+}
+
+function resetAllInp(){
+	var allInp=document.querySelectorAll("input:not(#edit-inpR)");
+	allInp.forEach((inp)=>{
+		inp.value="";
+	});
 }
 
 
