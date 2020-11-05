@@ -136,7 +136,7 @@ function generateContentStr(mveData){
 								  			<input data-toggle="tooltip" title='${mve["movie"]} movie rating' type="number" step="0.1" max="5" class="form-control form-control-sm" id="edit-inpR" value="${mve["rating"]}" disabled>
 								  		</div>
 								  		<div class="col-4">
-								  			<span data-toggle="tooltip" title='edit rating by clicking here\nclick away to save rating' class="edit-rating text-primary">edit</span>
+								  			<span data-toggle="tooltip" title='edit rating by clicking here\nclick away to save rating' class="edit-rating text-primary"><i class="fa fa-edit" style="font-size:20px;"></i> edit</span>
 								  		</div>
 								  	</div>
 								</div>
