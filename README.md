@@ -18,3 +18,6 @@
   <li>admin password : admin@123</li>
 </ul>
 
+<h4>Steps to Follow :</h4>
+<ol>
+  <li>Visit the link <a href="https://varun-kilaru.github.io/zoflix.github.io/">ZOFLIX</a></li>
