@@ -1,9 +1,3 @@
-var select = document.querySelector("#sort");
-select.addEventListener('change', function(e){
-	sortMveData(e.target.value);
-});
-
-
 var keyToFilter;
 var keyVal=document.querySelector("#filter-by");
 keyVal.addEventListener('click', function(e){
@@ -12,6 +6,11 @@ keyVal.addEventListener('click', function(e){
 	e.target.parentElement.previousElementSibling.innerText = e.target.innerText;
 	// console.log(e.target.parentElement.parentElement.nextElementSibling);
 	e.target.parentElement.parentElement.nextElementSibling.value="";
+});
+
+var select = document.querySelector("#sort");
+select.addEventListener('change', function(e){
+	sortMveData(e.target.value);
 });
 
 
@@ -24,7 +23,7 @@ search.addEventListener('input', function(e){
 
 function sortMveData(item){
 	// console.log(item);
-	var temp=movies;
+	var temp=movies.slice(0);
 	if(item!="default"){
 		if(item=="date" || item=="rating"){
 			temp.sort((a,b)=>{

@@ -38,7 +38,11 @@ movieData.addEventListener('click', function(e){
 		rateInp.disabled=false;
 		rateInp.focus();
 		rateInp.addEventListener('change', function(e){
-			if(e.target.value > 5 || e.target.value < 0){
+			if(parseInt(e.target.value) > 5){
+				alert('Rate from 1-5 only');
+				e.target.focus();
+			}
+			else if(parseInt(e.target.value) < 1){
 				alert('Rate from 1-5 only');
 				e.target.focus();
 			}
@@ -78,8 +82,12 @@ insertB.addEventListener('click', function(e){
 	});
 	var rate=document.querySelector("#mveRating");
 	if(infoEmptyflag)
-		alert('Enter all details of the movie.')
-	else if(obj["rating"] > 5 || obj["rating"] < 0){
+		alert('Enter all details of the movie.');
+	else if(parseInt(obj["rating"]) < 1){
+		alert('Rate 1-5 only');
+		rate.focus();
+	}
+	else if(parseInt(obj["rating"]) > 5){
 		alert('Rate 1-5 only');
 		rate.focus();
 	}
@@ -123,20 +131,23 @@ function generateContentStr(mveData){
 								<div class="col-5">
 									<h5>${mve["movie"]}</h5>
 									<small>
-										Language : ${mve["lang"]}, 
+										Language : ${mve["lang"]}
+										<br> 
 										Genre : ${mve["genre"]}
 									</small>
 									<br>
 									<small>Date Added : ${new Date(mve["date"]).toDateString()}</small>
+									<br>
+									<small>Rating : <b>${mve["rating"]}</b></small>
 								</div>
 								<div class="col-4">
-								<h6>Movie Rating(0 - 5)</h6>
 									<div class="row" id=${mve["key"]}>
+										<p>Give Movie Rating( 1 - 5 )</p>
 										<div clas="col-8">
 								  			<input data-toggle="tooltip" title='${mve["movie"]} movie rating' type="number" step="0.1" max="5" class="form-control form-control-sm" id="edit-inpR" value="${mve["rating"]}" disabled>
 								  		</div>
 								  		<div class="col-4">
-								  			<span data-toggle="tooltip" title='edit rating by clicking here\nclick away to save rating' class="edit-rating text-primary"><i class="fa fa-edit" style="font-size:20px;"></i> edit</span>
+								  			<span data-toggle="tooltip" title='edit rating by clicking here\nclick away to save rating' class="edit-rating text-primary">edit</span>
 								  		</div>
 								  	</div>
 								</div>

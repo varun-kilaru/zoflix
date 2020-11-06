@@ -62,7 +62,7 @@ function validateLoginUser(userObj){
 		return flag;
 	}
 	if(userObj["pass"].length<5){
-		alert('Password should be of atleast 5 characters.');
+		alert('Password should be of atleast 6 characters.');
 		return flag;
 	}
 	users.forEach((user)=>{
