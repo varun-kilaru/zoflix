@@ -125,5 +125,5 @@ function redirectToRegister(){
 	homeVeiw.style.display="none";
 	loginVeiw.style.display="none";
 	// currentUser={};
-	localStorage.removeItem("currentUser");
+	//localStorage.removeItem("currentUser");
 }
