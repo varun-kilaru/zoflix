@@ -78,6 +78,7 @@ function redirectToLogin(){
 	homeVeiw.style.display="none";
 	loginVeiw.style.display="block";
 	// currentUser={}; 
+	localStorage.removeItem("currentUser");
 	resetAllInp();
 }
 
