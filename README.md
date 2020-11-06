@@ -21,3 +21,10 @@
 <h4>Steps to Follow :</h4>
 <ol>
   <li>Visit the link <a href="https://varun-kilaru.github.io/zoflix.github.io/">ZOFLIX</a></li>
+  <li>Register yourself<li>
+  <li>After successful register, login yourself with registerd credentials</li>
+  <li>And can now see the listing page and able to filter and sort content</li>
+  <li>And also able to rate the content</li>
+<ol>
+  
+<p><b>Note : </b>Intially, there may be no content in the listing page. So, first login using admin credentials and add content.</p>
