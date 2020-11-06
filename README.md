@@ -1,4 +1,4 @@
-<h1>zoflix</h1>
+<h1>ZOFLIX</h1>
 
 <p>A simple movie listing app which can do the following : </p>
 <ul>
