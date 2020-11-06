@@ -1,2 +1,2 @@
 # zoflix
-A simple movie listing app.
+<h1>A simple movie listing app.</h1>
