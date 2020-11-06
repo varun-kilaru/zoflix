@@ -1,2 +1,2 @@
-# zoflix
-<h1>A simple movie listing app.</h1>
+<h1>zoflix</h1>
+#A simple movie listing app.
