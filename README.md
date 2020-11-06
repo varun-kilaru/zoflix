@@ -11,7 +11,7 @@
 </ul>
 
 
-<h3>Live at : <a href="https://varun-kilaru.github.io/zoflix.github.io/">zoflix</a></h3>
+<h3>Live at : <a href="https://varun-kilaru.github.io/zoflix.github.io/">ZOFLIX</a></h3>
 <h5>admin credentials : </h5>
 <ul>
   <li>admin mail : user@admin.com</li>
