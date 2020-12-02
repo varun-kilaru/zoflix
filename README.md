@@ -17,7 +17,7 @@
 <ol>
   <li>Visit the link <a href="https://varun-kilaru.github.io/zoflix.github.io/">ZOFLIX</a></li>
   <li>Register yourself</li>
-  <li>After successful register, login yourself with registerd credentials</li>
+  <li>After successful register, login yourself with registered credentials</li>
   <li>And can now see the listing page and able to filter and sort content</li>
   <li>And also able to rate the content</li>
 </ol>
